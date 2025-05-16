@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Estrutura HTML5 com Bootstrap e Font Awesome</title>
+    <meta name="description" content="Uma página de exemplo para demonstrar a estrutura básica do HTML5 com Bootstrap e Font Awesome.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados (opcional) -->
+    <title>Footer com Direitos Reservados</title>
+
+    <style>
+        body {
+            padding: 20px;
+            background: linear-gradient(135deg, #242424 50%, #00ffb3 50%);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        header {
+            margin-bottom: 20px;
+             background: linear-gradient(135deg, #242424 50%, #00ffb3 50%);
+            font-size:larger;
+        }
+        footer {
+            color:#ffffff;
+            margin-top: 10px;
+            padding-top: 15px;
+             background: linear-gradient(135deg, #242424 50%, #00ffb3 50%);
+            font-size:large ;
+        }
+        .icon {
+            margin-right: 5px;
+        }
+
+
+        table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color:#ffffff
+}
+
+th, td {
+  border: 1px solid #000000;
+  padding-right: 10px;
+  padding-left: 20px;
+  text-align:left;
+}
+
+th {
+  background-color: #9b9b9b9c;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+tr:hover {
+  background-color: #666666;
+}
+
+img {
+  object-fit: cover; 
+  object-position: 50% 25%; 
+  width: 250px;
+  height: 250px;
+}
+
+img {
+    max-width: 95%;
+    height: auto;
+}
+
+.jogos{
+      font-size: 20px;
+    }
+
+.valor{
+    font-size: 20px;
+}
+
+.form-pesquisa {
+      display: flex;
+      justify-content:center;
+      margin-top: 50px;
+    }
+
+    .barra-pesquisa {
+      padding: 10px 15px;
+      font-size: 16px;
+      width:10cm;
+      border: 1px solid #ccc;
+      border-radius: 20px 0 0 20px; /* arredonda só o lado esquerdo */
+      outline: none;
+    }
+
+    .botao-pesquisa {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-left: none;
+      border-radius: 0 20px 20px 0; /* arredonda só o lado direito */
+      background-color: #1e90ff;
+      color: white;
+      cursor: pointer;
+    }
+
+    .botao-pesquisa:hover {
+      background-color: #187bcd;
+    }
+
+  .produto {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+
+    .card-produto {
+      background: linear-gradient(315deg, #00ffb3 50%, #242424 50%);
+      border: 1px solid transparent;
+      border-radius: 10px;
+      width:auto;
+      padding: 10px;
+      text-align:left;
+      transition: 0.3s;
+      margin: 3%;
+    }
+
+    .card-produto:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform: scale(1.03);
+    }
+
+    .card-produto img {
+      max-width: 100%;
+      height:100%;
+      border-radius: 5px;
+    }
+
+    .card-produto h2 {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .navbar {
+      padding: 15px 30px;
+      border-radius: 50px; /* Aqui você arredonda os cantos */
+      width: 90%;
+      margin: 20px auto;
+      text-align:center;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    </style>
+    
+    <link rel="preload" href="imagem-importante.jpg" as="image">
+</head>
+<body>
+    <!-- Cabeçalho -->
+        <header class="container">    
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="text-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" 
+                      width="98" 
+                      height="98" 
+                      fill="blue" 
+                      class="bi bi-joystick" 
+                      viewBox="0 0 16 16">
+                        <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2"/>
+                        <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23"/>
+                    </svg> Game$hop</h1>
+                    <nav class="container">
+                        <form class="form-pesquisa" action="#" method="get">
+                      <input type="text" class="barra-pesquisa" placeholder="Buscar...">
+                      <button type="submit" class="botao-pesquisa"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg></button>
+                    </form>                                           
+                    </nav>
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+                        <button class="navbar-toggler" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link active" 
+                                aria-current="page" 
+                                href="index-pagina-de-Carrinho.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="16" 
+                                height="16" 
+                                fill="currentColor" 
+                                class="bi bi-basket2-fill" 
+                                viewBox="0 0 16 16">
+                                    <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
+                                  </svg> Carrinho</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" 
+                                href="index-pagina-de-Favoritos.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                width="16" 
+                                height="16" 
+                                fill="currentColor" 
+                                class="bi bi-star" 
+                                viewBox="0 0 16 16">
+                                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                                  </svg> Favoritos</a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" 
+                                href="#" 
+                                role="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" 
+                                d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 
+                                .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5
+                                 13.293V1.5A.5.5 0 0 1 8 1"/></svg>
+                                 Outros
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="index-perfil.html">Perfil</a></li>
+                                  <li><a class="dropdown-item" href="index-pagina-de-feedback.html">Feedback</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="index-pagina-de-Meu-Acesso.html">Meu Acesso</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav></div>
+                </div>
+            </header>
+
+    <!-- Conteúdo principal -->
+    <main class="container">
+        <section>
+            <table border="1">
+                <!-- Head da Tabela -->   
+                <thead>
+                  <!-- Linha -->       
+                 
+                </thead>
+                <!-- Corpo da tabela --> 
+                <tbody>
+                  <!-- Linha -->     
+                  <tr class="produtos"> 
+                    <a href="index-pagina-de-compra.html" class="produto">
+                      <div class="card-produto">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_849004-MLU73290324045_122023-O.webp" alt="Far Cry 6">
+                        <h2>Nome: Far Cry 6</h2>
+                        <p>Plataformas:
+
+                          PlayStation 4,
+
+                          PlayStation 5,
+                          
+                          Xbox One,
+
+                          Pc, outros. </p>
+                      <p>Desenvolvedora: Ubisoft Toronto</p>
+                      <p>Ano de lançamento: 2021</p>
+                      <p>Faixa etária: 18+</p>
+                      <p>Disponivel</p>
+                      <p>Valor: R$225,00</p>
+                      </div>
+                    </a>
+                  </tr>
+                </div>
+
+
+
+                  
+
+                      <a href="index-pagina-de-compra-2.html" class="produto">
+                      <div class="card-produto">
+                          <img src="https://http2.mlstatic.com/D_NQ_NP_914954-MLU72930692401_112023-O.webp" alt="The Last of Us Part II">
+                          <h2>Nome: The Last of Us Part II</h2>
+                            <p>Plataformas: PlayStation 4</p>
+                            <p>Desenvolvedora: Naughty Dog</p>
+                            <p>Ano de lançamento: 2020</p>
+                            <p>Faixa etária: 18+</p>
+                            <p>Disponivel</p>
+                            <p>Valor: R$225,00</p>
+    
+                  
+                          <tr>
+                            <a href="index-pagina-de-compra-4.html" class="produto">
+                              <div class="card-produto">
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_657884-MLU78473125757_082024-O.webp" alt="The Legend of Zelda: Breath of the Wild">
+                                <h2>Nome: The Legend of Zelda: Breath of the Wild</h2>
+                            <p>Plataformas: Nintendo Switch, Wii U </p>
+                            <p>Desenvolvedora: Nintendo EPD</p>
+                            <p>Ano de lançamento:2017</p>
+                            <p>Faixa etária: 10+</p>
+                            <p>Disponivel</p>
+                            <p>Valor: R$299,00</p>
+                          </tr>
+                
+                  
+                  <tr>        
+                    <a href="index-pagina-de-compra-5.html" class="produto">
+                      <div class="card-produto">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_973411-MLU77325546243_062024-O.webp" alt="Elden Ring">
+                        <h2>Nome: Elden Ring</h2>
+                            <p>Nome: Elden Ring</p>
+                            <p>Plataformas: PlayStation, Xbox, PC</p>
+                            <p>Desenvolvedora: FromSoftware</p>
+                            <p>Ano de lançamento: 2022</p>
+                            <p>Faixa etária: 16+</p>
+                            <p>Disponivel</p>
+                            <p>Valor: R$250,00</p>
+                    </td>
+                    
+    
+    
+                  <tr>        
+                    <a href="index-pagina-de-compra-6.html" class="produto">
+                      <div class="card-produto">
+                        <img src="https://th.bing.com/th/id/OPHS.cRnrERPaaeXimQ474C474?w=248&h=248&c=17&o=5&pid=21.1" alt="God of War (2018)">
+                        <h2>Nome: God of War (2018)</h2>
+                            <p>Nome: God of War (2018)</p>
+                            <p>Plataformas: PlayStation 4 </p>
+                            <p>Desenvolvedora: Santa Monica Studio</p>
+                            <p>Ano de lançamento: 2018</p>
+                            <p>Faixa etária: 18+</p>
+                            <p>Ultimas Unidades</p>
+                  </tr>
+    
+                  <tr>        
+                   
+                      <a href="index-pagina-de-compra-7.html" class="produto">
+                      <div class="card-produto">
+                        <img src="https://a-static.mlcdn.com.br/800x560/jogo-minecraft-starter-collection-ps-4-mojang/dg-mix-games/fedb88d6beb611efa3594201ac18503c/4ae8686c526e637ff3275e8448ca7ce9.jpeg"
+                            alt="Minecraft"></td>
+                            <p>Nome: Minecraft</p>
+                            <p>Plataformas: PC, PlayStation, Xbox, Switch, Mobile</p>
+                            <p>Desenvolvedora: Mojang Studios</p>
+                            <p>Ano de lançamento: 2011</p>
+                            <p>Faixa etária: Livre</p>
+                            <p>Poucas Unidades</p>
+                            <p>Valor: R$100,00</p>
+                  </tr>
+    
+                  <tr>
+                      <a href="index-pagina-de-compra-8.html" class="produto">
+                      <div class="card-produto">      
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_731180-MLA82623605951_022025-O.webp"
+                            alt="Red Dead Redemption 2"></td>                        
+                            <p>Nome: Red Dead Redemption 2</p>
+                            <p>Plataformas: PlayStation 4, Xbox One, PC</p>
+                            <p>Desenvolvedora: Rockstar Games</p>
+                            <p>Ano de lançamento: 2018</p>
+                            <p>Faixa etária: 18+</p>
+                            <p>Poucas Unidades</p>
+                            <p>Valor: R$200,00</p>
+                  </tr>
+    
+    
+                  <tr>        
+                      <a href="index-pagina-de-compra-9.html" class="produto">
+                      <div class="card-produto">      
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_867031-MLA40865317687_022020-O.webp"
+                            alt="Super Mario Odyssey"></td>                        
+                            <p>Nome: Super Mario Odyssey</p>
+                            <p>Plataformas:Nintendo Switch</p> 
+                            <p>Desenvolvedora: Nintendo EPD</p>
+                            <p>Ano de lançamento: 2017</p>
+                            <p>Faixa etária: Livre</p>
+                            <p>Poucas Unidades</p>
+                            <p>Valor: R$299,00</p>
+                  </tr>
+    
+    
+                  <tr>        
+                      <a href="index-pagina-de-compra-3.html" class="produto">
+                      <div class="card-produto">      
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_999556-MLA54078260253_022023-O.webp"
+                            alt="Resident Evil 4 Remake"></td>                        
+                            <p>Nome: Resident Evil 4 Remake</p>
+                            <p>Plataformas: PlayStation, Xbox, PC</p>
+                            <p>Desenvolvedora: Capcom</p>
+                            <p>Ano de lançamento: 2023</p>
+                            <p>Faixa etária: 18+</p>
+                            <p>Indisponivel</p>
+                            <p>Valor: R$249,00</p>
+                  </tr>
+    
+                  <tr>        
+                      <a href="index-pagina-de-compra-10.html" class="produto">
+                      <div class="card-produto">        
+                        <img src="https://th.bing.com/th/id/OIP.Yb7isThvH5JUfM0_qCix0wHaJC?rs=1&pid=ImgDetMain"
+                            alt="Fortnite"></td>                      
+                            <p>Nome: Fortnite</p>
+                            <p>Plataformas: PC, PlayStation, Xbox, Switch, Mobile</p>
+                            <p>Desenvolvedora: Epic Games</p>
+                            <p>Ano de lançamento: 2017</p>
+                            <p>Faixa etária: 18+</p>
+                            <p>Ultimas Unidades</p>
+                            <p>Valor: R$45,00</p>
+                  </tr>
+    
+    
+                  <tr>        
+                      <a href="index-pagina-de-compra-11.html" class="produto">
+                      <div class="card-produto">      
+                        <img src="https://th.bing.com/th?id=OPHS.r%2bjqAAK9NjUuVA474C474&w=248&h=248&c=17&o=5&pid=21.1"
+                            alt="Hollow Knight"></td>                     
+                            <p>Nome: Hollow Knight</p>
+                            <p>Plataformas: PC, PlayStation, Xbox, Switch </p>
+                            <p>Desenvolvedora: Team Cherry</p>
+                            <p>Ano de lançamento: 2017 </p>
+                            <p>Faixa etária: 18+</p>
+                            <p>Ultimas Unidades</p>
+                            <p>valor: R$70,00</p>
+                  </tr>
+
+    
+    
+    
+                </tbody>
+              </table>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="footer" class="container text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 border"><p>Links rápidos</p>
+                  <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Sobre nós</a></li>
+                    <li class="breadcrumb-item"><a href="#">FAQ</a></li>
+                    <li class="breadcrumb-item"><a href="#">Ajuda</a></li>
+                    <li class="breadcrumb-item"><a href="#">Blog</a></li>
+                    <li class="breadcrumb-item"><a href="#">Contato</a></li>
+                  </ol>
+                  </nav>
+                    
+                    
+
+
+                </div>
+                <div class="col-4 border"><p>Contatos
+                    <p>
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+                            <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"/>
+                          </svg> +55 (21)98***-**25</a></li>
+                        </ol>
+                      </nav>
+
+                    </p>
+                    <p>
+                      <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                          </svg> e-mail:sa**************.com</a></li>
+                      </ol>
+                    </nav>
+                    </p>
+                </p></div>
+                <div class="col-5 border"><p class="text-muted"><i class="far fa-copyright icon"></i> 2025 - Todos os direitos reservados.</p>
+                <p>Política de Privacidade</p>
+            <p>Termos de Uso</p></div>
+
+            
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

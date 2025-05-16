@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Estrutura HTML5 com Bootstrap e Font Awesome</title>
+    <meta name="description" content="Uma página de exemplo para demonstrar a estrutura básica do HTML5 com Bootstrap e Font Awesome.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados (opcional) -->
+    <title>Favoritos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #242424 50%, #00ffb3 50%);
+      color: white;
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ff00;
+      margin-bottom: 40px;
+    }
+
+    .favoritos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .favorito-card {
+      background-color: #1e1e1e;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 15px #00000080;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .favorito-card:hover {
+      transform: scale(1.03);
+    }
+
+    .favorito-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .favorito-card h2 {
+      margin-bottom: 10px;
+      color: #00ffb3;
+    }
+
+    .valor {
+      font-weight: bold;
+      color: #ffd700;
+    }
+
+    .btn-remover {
+      margin-top: 10px;
+      background-color: #ff4d4d;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .btn-remover:hover {
+      background-color: #ff1a1a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Seus Favoritos</h1>
+
+  <div class="favoritos-grid">
+    <div class="favorito-card">
+      <img src="https://th.bing.com/th?id=OPHS.r%2bjqAAK9NjUuVA474C474&w=248&h=248&c=17&o=5&pid=21.1" alt="Hollow Knight">
+      <h2>Hollow Knight</h2>
+      <p class="valor">R$70,00</p>
+      <button class="btn-remover">Remover</button>
+    </div>
+
+    <div class="favorito-card">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_849004-MLU73290324045_122023-O.webp" alt="Far Cry 6">
+      <h2>Far Cry 6</h2>
+      <p class="valor">R$225,00</p>
+      <button class="btn-remover">Remover</button>
+    </div>
+
+    <!-- Você pode duplicar os cards para outros favoritos -->
+  </div>
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

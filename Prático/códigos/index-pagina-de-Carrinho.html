@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Estrutura HTML5 com Bootstrap e Font Awesome</title>
+    <meta name="description" content="Uma página de exemplo para demonstrar a estrutura básica do HTML5 com Bootstrap e Font Awesome.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados (opcional) -->
+    <title>Seu Carrinho</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #242424 50%, #00ffb3 50%);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .carrinho-container {
+      background-color: #1e1e1e;
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 0 20px #00000080;
+    }
+
+    .carrinho-container h1 {
+      color: #00ff00;
+      margin-bottom: 20px;
+    }
+
+    .item {
+      border-bottom: 1px solid #444;
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .item img {
+      width: 80px;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .valor {
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    .total {
+      margin-top: 20px;
+      font-size: 1.2em;
+      text-align: right;
+    }
+
+    .btn-finalizar {
+      background-color: #00ffb3;
+      color: black;
+      padding: 15px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: block;
+      margin: 30px auto 0;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-finalizar:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="carrinho-container">
+    <h1>Seu Carrinho</h1>
+
+    <div class="item">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_849004-MLU73290324045_122023-O.webp" alt="Far Cry 6">
+      <div class="info">
+        <p>Far Cry 6</p>
+        <p class="valor">R$225,00</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_657884-MLU78473125757_082024-O.webp" alt="Zelda BOTW">
+      <div class="info">
+        <p>The Legend of Zelda: Breath of the Wild</p>
+        <p class="valor">R$299,00</p>
+      </div>
+    </div>
+
+    <div class="total">
+      Total: <span class="valor">R$524,00</span>
+    </div>
+
+    <a href="#" class="btn-finalizar">Finalizar Compra</a>
+  </div>
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
