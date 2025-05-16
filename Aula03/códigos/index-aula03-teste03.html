@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Games</title>
+    <meta name="description" content="Uma página de exemplo para demonstrar a estrutura básica do HTML5 com Bootstrap e Font Awesome.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados (opcional) -->
+    <style>
+        body {
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        header {
+            margin-bottom: 30px;
+            background-color: #00ffc8;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            background-color: #09ff00;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+
+        audio {
+            width: 80%;
+            margin: 15px auto;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 10px;
+          }
+
+          audio.estilizado:hover{
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          }
+
+          video.video-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 12px;
+            overflow: hidden;
+          }
+          
+          video {
+            width: 100%;
+            height:auto;
+          }
+        
+
+          .mapa:hover{
+            transform: scale(1.01);
+          }
+
+          iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 12px;
+          }
+
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class=>
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="text-primary"><i class="bi bi-controller"></i></i> Game$hop</h1>
+            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="#section1" class="nav-link"><i class="bi bi-basket2-fill"></i></i> Carrinho</a></li>
+                    <li class="nav-item"><a href="#section2" class="nav-link"><i class="bi bi-star-fill"></i></i> Salvos</a></li>
+                    <li class="nav-item"><a href="#footer" class="nav-link"><i class="bi bi-person-circle"></i></i> Perfil</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="video.conteiner">
+        <audio controls>
+            <source src="https://cdn.pixabay.com/download/audio/2025/01/08/audio_22f7e32376.mp3?filename=dream-guitar-olam-musicali-285688.mp3" type="audio/mpeg">
+            <source src="https://commons.wikimedia.org/audiosample.ogg" type="audio/ogg">
+            Seu navegador não suporta áudio HTML5.
+          </audio>
+          
+        <video controls>
+            <source src="https://archive.org/download/ElephantsDream/ed_hd.mp4" type="video/mp4">
+            <source src="https://commons.wikimedia.org/videosample.webm" type="video/webm">
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+
+          <div class="mapa">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991440608207!2d2.292292615509614!3d48.858373608662095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTorre%20Eiffel!5e0!3m2!1spt-BR!2sbr!4v1713123456789!5m2!1spt-BR!2sbr" 
+               
+              style="border:0;" 
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="footer" class="container">
+        <div class="row">
+            <div class="col-md-2">Links Rápidos
+            <p>Sobre nós</p>
+            <p>Faq</p>
+            <p>Ajuda</p>
+            <p>Meu acesso</p>
+            <p>Blog</p>
+            <p>Contato</p>
+            <p>Contatos</p>
+
+        </div>
+            <div class="col-md-3"> Contatos
+            <p><i class="bi bi-telephone"></i> +55 (21)98***-****</p>
+            <p><i class="bi bi-envelope"></i> E-mail:sa.........gmail.com</p> </div>
+            
+            <div class="col-md-7">
+                <p class="text-muted"><i class="far fa-copyright icon"></i> 2025 - Todos os direitos reservados.</p>
+            </div>
+        </div>
+        
+    </footer>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
